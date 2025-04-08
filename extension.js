@@ -460,5 +460,6 @@ export default class ScrollerExtension extends Extension {
     disable() {
         desktopscroller.destroy();
         desktopscroller = null;
+        settings = null;
     }
 }

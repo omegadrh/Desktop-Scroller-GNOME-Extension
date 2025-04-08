@@ -72,7 +72,7 @@ const DesktopScrollerSettingsWidget = new GObject.Class({
             });
             checkGrid.attach(check, left, 1, 1, 1);
 
-            check.connect('toggled', function foobar(widget) {
+            check.connect('toggled', function onEdgeCheckboxToggled(widget) {
                 if (widget.active) {
                     DesktopScrollerPreferences.enableEdge(this._settings, edge);
                 } else {
