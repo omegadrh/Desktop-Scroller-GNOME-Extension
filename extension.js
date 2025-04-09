@@ -394,10 +394,10 @@ class Scroller {
     _onScrollEventSafe(actor, event) {
         switch (event.get_scroll_direction()) {
             case Clutter.ScrollDirection.UP:
-                Main.wm.actionMoveWorkspace(Meta.MotionDirection.UP);
+                Main.wm.actionMoveWorkspace(Meta.MotionDirection.LEFT);
                 return true;
             case Clutter.ScrollDirection.DOWN:
-                Main.wm.actionMoveWorkspace(Meta.MotionDirection.DOWN);
+                Main.wm.actionMoveWorkspace(Meta.MotionDirection.RIGHT);
                 return true;
         }
         return false;
@@ -421,7 +421,7 @@ class Scroller {
         }
 
         /* Shows the switcher and scrolls */
-        Main.wm._showWorkspaceSwitcher(global.display, null, binding_obj);
+        Main.wm._showWorkspaceSwitcher(global.display, null, null, binding_obj);
 
         let switcher = Main.wm._workspaceSwitcherPopup;
         if (switcher && add_switcher_handler) {
